@@ -30,7 +30,8 @@
     "ci": "rm -rf node_modules && npm install && grunt ci",
     "build": "grunt build:clean",
     "tslint": "grunt tslint:check",
-    "test": "grunt test"
+    "test": "grunt test",
+    "precommit": "grunt precommit"
   },
   "author": "Cedric Haase",
   "license": "ISC"
