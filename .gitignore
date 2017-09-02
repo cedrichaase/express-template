@@ -1,5 +1,6 @@
 *.js
 *.js.map
+!test/**/*.js
 node_modules/
 .idea/
 dist/
