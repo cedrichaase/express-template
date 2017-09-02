@@ -100,7 +100,7 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: ['dist', '.tscache', 'coverage']
+        clean: ['dist', '.tscache', 'coverage', '.nyc_output']
     });
 
     // load grunt plugins
