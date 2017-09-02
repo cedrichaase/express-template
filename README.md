@@ -6,9 +6,10 @@ A template for node.js/express applications written in TypeScript
 
 ## Features
 
-* TypeScript
+* `TypeScript`
 * `tslint`
 * e2e- and unit tests with `mocha`
+* `gitlab-ci`
 
 
 ## Setup
