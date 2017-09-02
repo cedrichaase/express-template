@@ -7,16 +7,22 @@ before_script:
 
 stages:
   - build
+  - test
   - deploy
 
 build:
   stage: build
-
-
-ci:
-  stage: build
   script:
-    - npm run ci
+    - npm install
+    - npm run tslint
+    - npm run build
+
+test:
+  stage: test
+  dependencies:
+    - build
+  script:
+    - npm run test
   artifacts:
     paths:
       - coverage/lcov-report/
