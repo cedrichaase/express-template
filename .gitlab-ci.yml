@@ -1,5 +1,5 @@
 before_script:
-  - apt-get update -qq && apt-get install -y -qq nodejs npm
+  - apt-get update -qq && apt-get install -y -qq nodejs nodejs-legacy npm
   - nodejs -v
   - npm -v
   - npm i -g typescript grunt
