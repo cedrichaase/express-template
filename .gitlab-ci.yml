@@ -4,19 +4,7 @@ before_script:
   - node -v
   - npm -v
   - npm i -g typescript grunt
-  - npm i
 
-stages:
-  - build
-  - test
-
-build-job:
-  stage: build
+ci:
   script:
-    - grunt tslint:check
-    - grunt build:clean
-
-test-job:
-  stage: test
-  script:
-    - grunt test
+    - npm run ci
