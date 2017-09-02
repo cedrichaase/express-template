@@ -30,7 +30,7 @@ test:
 pages:
   stage: deploy
   dependencies:
-    - ci
+    - test
   script:
     - mv coverage/lcov-report/ public/
   artifacts:
