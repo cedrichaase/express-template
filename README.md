@@ -2,6 +2,9 @@
 
 [![pipeline status](https://gitlab.com/cedrichaase/express-template/badges/master/pipeline.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
 
+[![coverage report](https://gitlab.com/cedrichaase/express-template/badges/master/coverage.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
+
+
 A template for node.js/express applications written in TypeScript
 
 ## Features
@@ -10,6 +13,7 @@ A template for node.js/express applications written in TypeScript
 * `tslint`
 * e2e- and unit tests with `mocha`
 * `gitlab-ci`
+* code coverage with `istanbul` and `gitlab-pages`
 
 
 ## Setup
