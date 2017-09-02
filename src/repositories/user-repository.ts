@@ -42,9 +42,9 @@ export class UserRepository {
     }
 
     public deleteUserById(id): Promise<void> {
-        const index = this.users.findIndex(x => x.id === +id);
+        const index = this.users.findIndex(x => x && x.id === +id);
 
-        if (! ~index) {
+        if (index < 0) {
             return Promise.reject(new Error("User not found!"));
         }
 
@@ -60,7 +60,7 @@ export class UserRepository {
 
         let dbUser;
         for (dbUser of this.users) {
-            if (dbUser.id === user.id) {
+            if (dbUser && dbUser.id === user.id) {
                 dbUser = user;
                 break;
             }
