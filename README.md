@@ -13,7 +13,7 @@ A template for node.js/express applications written in TypeScript
 * `tslint`
 * e2e- and unit tests with `mocha`
 * `gitlab-ci`
-* code coverage with `istanbul` and `gitlab-pages`
+* [code coverage](https://cedrichaase.gitlab.io/express-template) with `istanbul` and `gitlab-pages`
 
 
 ## Setup
