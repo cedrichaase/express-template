@@ -5,9 +5,27 @@ before_script:
   - npm -v
   - npm i -g typescript grunt
 
+stages:
+  - build
+  - deploy
+
 ci:
+  stage: build
   script:
     - npm run ci
   artifacts:
     paths:
       - coverage/lcov-report
+
+pages:
+  stage: deploy
+  dependencies:
+    - ci
+  script:
+    - mv coverage/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
