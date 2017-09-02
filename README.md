@@ -1,8 +1,6 @@
 # Express Template
 
-[![pipeline status](https://gitlab.com/cedrichaase/express-template/badges/master/pipeline.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
-
-[![coverage report](https://gitlab.com/cedrichaase/express-template/badges/master/coverage.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
+[![pipeline status](https://gitlab.com/cedrichaase/express-template/badges/master/pipeline.svg)](https://gitlab.com/cedrichaase/express-template/commits/master) [![coverage report](https://gitlab.com/cedrichaase/express-template/badges/master/coverage.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
 
 
 A template for node.js/express applications written in TypeScript
