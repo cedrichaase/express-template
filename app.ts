@@ -1,3 +1,4 @@
+require("source-map-support").install();
 import container from "./src/app/container/container";
 
 const express = require("express");

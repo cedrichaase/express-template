@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     src: [
-                        "src/**/*.ts",
+                        "src/**/*.ts"
                     ]
                 }
             },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     src: [
-                        "src/**/*.ts",
+                        "src/**/*.ts"
                     ]
                 }
             }
@@ -65,9 +65,28 @@ module.exports = function(grunt) {
             test: {
                 options: {
                     reporter: 'nyan',
-                    quiet: false
+                    quiet: false,
+                    require: ['ts-node/register', 'source-map-support/register']
                 },
                 src: ['test/**/*.js']
+            }
+        },
+
+        mocha_istanbul: {
+            coverage: {
+                src: 'test'
+            }
+        },
+
+        remapIstanbul: {
+            dist: {
+                options: {
+                    reports: {
+                        "html": "./coverage/lcov-report",
+                        "json": "./coverage/coverage.json"
+                    }
+                },
+                src: "./coverage/coverage.json"
             }
         },
 
@@ -81,7 +100,7 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: ['dist', '.tscache']
+        clean: ['dist', '.tscache', 'coverage']
     });
 
     // load grunt plugins
@@ -91,10 +110,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-mocha-istanbul');
+    grunt.loadNpmTasks('remap-istanbul');
 
 
     // spawn an app instance and run the tests
-    grunt.registerTask('test', ['express:test', 'mochaTest', 'express:test:stop']);
+    grunt.registerTask('test', ['express:test', 'mocha_istanbul', 'remapIstanbul:dist', 'express:test:stop']);
 
     // compile
     grunt.registerTask('build', ['ts']);
