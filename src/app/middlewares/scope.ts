@@ -1,4 +1,4 @@
-import { asValue, AwilixContainer } from 'awilix';
+import { asValue, AwilixContainer } from "awilix";
 
 module.exports = (app, container: AwilixContainer) => {
     app.use((req, res, next) => {
@@ -7,7 +7,7 @@ module.exports = (app, container: AwilixContainer) => {
 
         // register some request-specific data..
         req.scope.register({
-            currentUser: asValue(req.scope.resolve('userRepository').getUserById(1))
+            currentUser: asValue(req.scope.resolve("userRepository").getUserById(1))
         });
 
         next();

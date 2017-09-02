@@ -1,4 +1,4 @@
-import { IUser, UserRepository } from '../repositories/user-repository';
+import { IUser, UserRepository } from "../repositories/user-repository";
 
 export class UserAction {
     private currentUser: IUser;

@@ -1,5 +1,5 @@
-const fakerator = require('fakerator');
-const faker = fakerator('de-DE');
+const fakerator = require("fakerator");
+const faker = fakerator("de-DE");
 
 export interface IUser {
     id: number;
@@ -38,14 +38,14 @@ export class UserRepository {
             return Promise.resolve(user);
         }
 
-        return Promise.reject(new Error('User not found!'));
+        return Promise.reject(new Error("User not found!"));
     }
 
-    public deleteUserById(id): Promise<undefined> {
+    public deleteUserById(id): Promise<void> {
         const index = this.users.findIndex(x => x.id === +id);
 
         if (! ~index) {
-            return Promise.reject(new Error('User not found!'));
+            return Promise.reject(new Error("User not found!"));
         }
 
         delete this.users[index];
@@ -55,7 +55,7 @@ export class UserRepository {
 
     public async updateUser(user): Promise<IUser> {
         if (!user.id) {
-            return Promise.reject(new Error('User does not have an ID'));
+            return Promise.reject(new Error("User does not have an ID"));
         }
 
         let dbUser;
@@ -67,7 +67,7 @@ export class UserRepository {
         }
 
         if (dbUser.id !== user.id) {
-            return Promise.reject(new Error('User not found'));
+            return Promise.reject(new Error("User not found"));
         }
 
         return Promise.resolve(dbUser);
