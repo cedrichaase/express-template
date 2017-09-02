@@ -25,6 +25,8 @@ export class UserRepository {
                 email: faker.internet.email(firstname, lastname)
             });
         }
+
+        throw new Error("oh no");
     }
 
     public getUsers(): Promise<IUser[]> {
