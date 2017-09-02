@@ -1,5 +1,7 @@
 # Express Template
 
+[![pipeline status](https://gitlab.com/cedrichaase/express-template/badges/master/pipeline.svg)](https://gitlab.com/cedrichaase/express-template/commits/master)
+
 A template for node.js/express applications written in TypeScript
 
 ## Features
