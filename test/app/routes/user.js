@@ -28,5 +28,15 @@ describe('User routes', () => {
                 assert.deepStrictEqual(apiUser, dbUser);
             }
         });
+
+        it('should throw an appropriate error if user is not found', async () => {
+
+            try {
+                const response = await request(`http://localhost:3000/users/9999`);
+            } catch (e) {
+                assert(e.name === 'StatusCodeError');
+                assert(e.statusCode === 404);
+            }
+        });
     });
 });
