@@ -9,6 +9,10 @@ stages:
   - build
   - deploy
 
+build:
+  stage: build
+
+
 ci:
   stage: build
   script:
@@ -22,7 +26,7 @@ pages:
   dependencies:
     - ci
   script:
-    - mv coverage/ public/
+    - mv coverage/lcov-report public/
   artifacts:
     paths:
       - public
