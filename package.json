@@ -2,6 +2,7 @@
   "name": "express-template",
   "version": "1.0.0",
   "description": "A nodejs/express application template",
+  "repository": "git@gitlab.com:cedrichaase/express-template.git",
   "main": "app.js",
   "dependencies": {
     "@types/node": "^8.0.24",
@@ -27,7 +28,8 @@
   },
   "scripts": {
     "watch": "grunt watch",
-    "ci": "rm -rf node_modules && npm install && grunt ci",
+    "clean-install": "rm -rf node_modules && npm install",
+    "ci": "npm run clean-install && grunt ci",
     "build": "grunt build:clean",
     "tslint": "grunt tslint:check",
     "test": "grunt test",
