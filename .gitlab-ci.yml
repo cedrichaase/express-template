@@ -4,6 +4,7 @@ before_script:
   - node -v
   - npm -v
   - npm i -g typescript grunt
+  - npm i
 
 stages:
   - build
