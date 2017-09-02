@@ -1,6 +1,6 @@
 before_script:
   - apt-get update -qq && apt-get install -y -qq nodejs npm
-  - alias node=nodejs
+  - ln -s /usr/bin/nodejs /usr/bin/node
   - node -v
   - npm -v
   - npm i -g typescript grunt
