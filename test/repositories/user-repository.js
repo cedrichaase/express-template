@@ -1,6 +1,5 @@
 const container = require('../../dist/out-tsc/src/app/container/container').default;
 const repo = container.resolve('userRepository');
-const request = require('request-promise');
 const assert = require('assert');
 
 describe('User Repository', () => {
