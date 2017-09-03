@@ -1,4 +1,4 @@
-const container = require('../../dist/out-tsc/src/app/container/container').default;
+const container = require('../../dist/src/app/container/container').default;
 const repo = container.resolve('userRepository');
 const assert = require('assert');
 

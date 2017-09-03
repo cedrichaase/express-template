@@ -35,6 +35,7 @@
     "watch": "grunt watch",
     "clean-install": "rm -rf node_modules && npm install",
     "ci": "npm run clean-install && grunt ci",
+    "setup": "npm i && grunt build",
     "build": "grunt build:clean",
     "tslint": "grunt tslint:check",
     "test": "grunt test",

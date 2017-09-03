@@ -45,18 +45,18 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
-                    script: 'dist/out-tsc/app.js'
+                    script: 'dist/app.js'
                 }
             },
             prod: {
                 options: {
-                    script: 'dist/out-tsc/app.js',
+                    script: 'dist/app.js',
                     node_env: 'production'
                 }
             },
             test: {
                 options: {
-                    script: 'dist/out-tsc/app.js'
+                    script: 'dist/app.js'
                 }
             }
         },
