@@ -1,12 +1,10 @@
-import { IUser, UserRepository } from "../repositories/user-repository";
+import { UserRepository } from "../repositories/user-repository";
 
 export class UserAction {
-    private currentUser: IUser;
     private repo: UserRepository;
 
-    constructor({ userRepository, currentUser }) {
+    constructor({ userRepository }) {
         this.repo = userRepository;
-        this.currentUser = currentUser;
     }
 
     public async getUser(req, res) {
