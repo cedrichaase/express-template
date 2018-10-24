@@ -7,7 +7,7 @@
   "dependencies": {
     "@types/node": "^8.0.24",
     "awilix": "^2.7.0",
-    "express": "^4.15.4",
+    "express": "^4.15.5",
     "fakerator": "^0.3.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
