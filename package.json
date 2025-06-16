@@ -6,11 +6,11 @@
   "main": "app.js",
   "dependencies": {
     "@types/node": "^8.0.24",
-    "awilix": "^2.7.0",
+    "awilix": "^6.1.0",
     "express": "^4.15.4",
     "fakerator": "^0.3.0",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.1"
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.42",
